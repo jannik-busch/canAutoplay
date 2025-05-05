@@ -1,0 +1,25 @@
+{
+  "name": "test-autoplay",
+  "version": "0.0.1",
+  "description": "A module to test video autoplay with sound capabilities.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && terser dist/index.js --compress --mangle --output dist/index.min.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "autoplay",
+    "video",
+    "test"
+  ],
+  "author": "Jannik Busch",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "terser": "^5.39.0",
+    "ts-jest": "^29.3.2",
+    "typescript": "^4.0.0"
+  }
+}
