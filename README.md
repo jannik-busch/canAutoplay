@@ -1,10 +1,10 @@
-# testAutoplay
+# test-autoplay
 
-`testAutoplay` is a JavaScript module designed to test if a video can autoplay with sound capabilities in a browser environment. This package is useful for developers who need to determine autoplay support for videos in their web applications.
+`test-autoplay` is a JavaScript module designed to test if a video can autoplay with sound capabilities in a browser environment. This package is useful for developers who need to determine autoplay support for videos in their web applications.
 
 ## Installation
 
-To install `testAutoplay`, use npm:
+To install `test-autoplay`, use npm:
 
 ```bash
 npm install test-autoplay
