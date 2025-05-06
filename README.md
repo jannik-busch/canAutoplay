@@ -7,7 +7,7 @@
 To install `canAutoplay`, use npm:
 
 ```bash
-npm install canAutoplay
+npm install canautoplay
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install canAutoplay
 Here's a basic example of how to use the `canAutoplay` function:
 
 ```javascript
-import { canAutoplay } from 'canAutoplay';
+import { canAutoplay } from 'canautoplay';
 
 (async () => {
   const canPlay = await canAutoplay();
