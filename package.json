@@ -1,5 +1,5 @@
 {
-  "name": "canautoplay",
+  "name": "test-autoplay",
   "version": "0.0.1",
   "description": "A module to test video autoplay with sound capabilities.",
   "main": "dist/index.js",

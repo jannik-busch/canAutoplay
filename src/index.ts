@@ -6,7 +6,7 @@ const DEFAULT_OPTIONS = {
   useCachedResultIfFalse: false,
 };
 
-type CanAutoplayOptions = {
+type TestAutoplayOptions = {
   useCachedResult?: boolean;
   useCachedResultIfTrue?: boolean;
   useCachedResultIfFalse?: boolean;
@@ -14,7 +14,7 @@ type CanAutoplayOptions = {
 
 let cachedResult: boolean | null = null;
 
-export async function canAutoplay(options: CanAutoplayOptions = DEFAULT_OPTIONS): Promise<boolean> {
+export async function testAutoplay(options: TestAutoplayOptions = DEFAULT_OPTIONS): Promise<boolean> {
   if (options.useCachedResult && cachedResult !== null) return cachedResult;
   if (options.useCachedResultIfTrue && cachedResult === true) return true;
   if (options.useCachedResultIfFalse && cachedResult === false) return false;

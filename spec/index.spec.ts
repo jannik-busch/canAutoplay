@@ -1,6 +1,6 @@
-import { canAutoplay } from '../src/index';
+import { testAutoplay } from '../src/index';
 
-describe('canAutoplay', () => {
+describe('test-autoplay', () => {
   let originalCreateElement: typeof document.createElement;
   let cachedResult: boolean | null = null;
 
@@ -34,7 +34,7 @@ describe('canAutoplay', () => {
       return originalCreateElement(tagName);
     });
 
-    const result = await canAutoplay();
+    const result = await testAutoplay();
     expect(result).toBe(true);
   });
 
@@ -60,7 +60,7 @@ describe('canAutoplay', () => {
       return originalCreateElement(tagName);
     });
 
-    const result = await canAutoplay();
+    const result = await testAutoplay();
     expect(result).toBe(true);
   });
 
@@ -86,19 +86,19 @@ it('should resolve true when video can autoplay with sound and cached result is 
       return originalCreateElement(tagName);
     });
 
-    const result = await canAutoplay();
+    const result = await testAutoplay();
     expect(result).toBe(true);
   });
 
   it('should resolve true when cached result is true and useCachedResult is true', async () => {
     cachedResult = true;    
-    const result = await canAutoplay({ useCachedResult: true });
+    const result = await testAutoplay({ useCachedResult: true });
     expect(result).toBe(true);
   });
 
   it('should resolve true when cached result is true and useCachedResultIfTrue is true', async () => {
     cachedResult = true;
-    const result = await canAutoplay({ useCachedResultIfTrue: true });
+    const result = await testAutoplay({ useCachedResultIfTrue: true });
     expect(result).toBe(true);
   });
 
@@ -119,7 +119,7 @@ it('should resolve true when video can autoplay with sound and cached result is 
       return originalCreateElement(tagName);
     });
 
-    const result = await canAutoplay();
+    const result = await testAutoplay();
     expect(result).toBe(false);
   });
 
@@ -140,7 +140,7 @@ it('should resolve true when video can autoplay with sound and cached result is 
       return originalCreateElement(tagName);
     });
 
-    const result = await canAutoplay();
+    const result = await testAutoplay();
     expect(result).toBe(false);
   });
 
@@ -152,7 +152,7 @@ it('should resolve true when video can autoplay with sound and cached result is 
       return originalCreateElement(tagName);
     });
 
-    const result = await canAutoplay();
+    const result = await testAutoplay();
     expect(result).toBe(false);
   });
 
@@ -174,7 +174,7 @@ it('should resolve true when video can autoplay with sound and cached result is 
     });
 
     jest.useFakeTimers();
-    const autoplayPromise = canAutoplay();
+    const autoplayPromise = testAutoplay();
     jest.advanceTimersByTime(2000); // Simulate timeout
     const result = await autoplayPromise;
     expect(result).toBe(false);

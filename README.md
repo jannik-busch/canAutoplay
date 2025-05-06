@@ -1,31 +1,31 @@
-# canAutoplay
+# testAutoplay
 
-`canAutoplay` is a JavaScript module designed to test if a video can autoplay with sound capabilities in a browser environment. This package is useful for developers who need to determine autoplay support for videos in their web applications.
+`testAutoplay` is a JavaScript module designed to test if a video can autoplay with sound capabilities in a browser environment. This package is useful for developers who need to determine autoplay support for videos in their web applications.
 
 ## Installation
 
-To install `canAutoplay`, use npm:
+To install `testAutoplay`, use npm:
 
 ```bash
-npm install canautoplay
+npm install test-autoplay
 ```
 
 ## Usage
 
-Here's a basic example of how to use the `canAutoplay` function:
+Here's a basic example of how to use the `testAutoplay` function:
 
 ```javascript
-import { canAutoplay } from 'canautoplay';
+import { testAutoplay } from 'test-autoplay';
 
 (async () => {
-  const canPlay = await canAutoplay();
+  const canPlay = await testAutoplay();
   console.log(`Can autoplay with sound: ${canPlay}`);
 })();
 ```
 
 ### Options
 
-The `canAutoplay` function accepts an optional configuration object with the following properties:
+The `testAutoplay` function accepts an optional configuration object with the following properties:
 
 - `useCachedResult`: (boolean) If true, returns the cached result if available.
 - `useCachedResultIfTrue`: (boolean) If true, returns true if the cached result is true.
@@ -40,7 +40,7 @@ const options = {
   useCachedResultIfFalse: false,
 };
 
-const canPlay = await canAutoplay(options);
+const canPlay = await testAutoplay(options);
 ```
 
 ## Development
